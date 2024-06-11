@@ -17,4 +17,5 @@ def get_response(user_input: str) -> str:
     else:
         return choice(['I do not understand...',
                        'What are you talking about?',
-                       'Do you mind rephrasing that?'])
+                       'Do you mind rephrasing that?',
+                       'Huh?'])
