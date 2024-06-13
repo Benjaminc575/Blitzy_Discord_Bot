@@ -11,7 +11,7 @@ def get_response(user_input: str) -> str:
     elif 'how are you' in lowered:
         return 'Good, thanks!'
     elif 'bye' in lowered:
-        return 'See you!'
+        return ':deaf_man: :shushing_face:'
     elif 'roll dice' in lowered:
         return f'You rolled: {randint(1, 6)}'
     else:
