@@ -28,13 +28,15 @@ def run_bot():
 
     @client.event
     async def on_ready():
-        print(f'{client.user} is now jamming')
+        print(f'{client.user} is now online!')
 
+    # Plays next song in queue
     async def play_next(ctx):
         if queues[ctx.guild.id] != []:
             link = queues[ctx.guild.id].pop(0)
             await play(ctx, link=link)
 
+    #defines play command for playing a youtube link
     @client.command(name="play")
     async def play(ctx, *, link):
         try:
@@ -111,11 +113,14 @@ def run_bot():
         if message.author == client.user:
             return
 
-        # Get response from the responses module
-        response = get_response(message.content)
-        await message.channel.send(response)
+        if message.content.startswith('!'):
+            await client.process_commands(message)
+        else:
+            # Get response from the responses module
+            response = get_response(message.content)
+            await message.channel.send(response)
 
-        await client.process_commands(message)
+            await client.process_commands(message)
 
     client.run(TOKEN)
 

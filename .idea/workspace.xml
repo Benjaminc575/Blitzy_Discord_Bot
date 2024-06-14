@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a57e10-9769-4a33-bff4-b437fe153d62" name="Changes" comment="Fixed bug where bot will return a random message when user sends link.">
+    <list default="true" id="36a57e10-9769-4a33-bff4-b437fe153d62" name="Changes" comment="Added queue system to bot.">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/message_handler.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/music.py" beforeDir="false" afterPath="$PROJECT_DIR$/music.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/responses.py" beforeDir="false" afterPath="$PROJECT_DIR$/responses.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -111,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718239186532</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added queue system to bot.">
+      <option name="closed" value="true" />
+      <created>1718330843418</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1718330843418</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -128,6 +134,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Music playing ability with youtube links." />
     <MESSAGE value="Fixed bug where bot will return a random message when user sends link." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug where bot will return a random message when user sends link." />
+    <MESSAGE value="Added queue system to bot." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added queue system to bot." />
   </component>
 </project>
