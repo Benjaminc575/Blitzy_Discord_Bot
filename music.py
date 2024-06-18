@@ -6,7 +6,7 @@ import yt_dlp
 from dotenv import load_dotenv
 import urllib.parse, urllib.request, re
 from responses import get_response
-
+import general_functions
 
 def run_bot():
     load_dotenv()
@@ -16,7 +16,7 @@ def run_bot():
     client = commands.Bot(command_prefix="!", intents=intents)
 
     queues = {}
-    voice_clients = {}
+    voice_clients = {}  # Manage your own voice_clients dictionary
     youtube_base_url = 'https://www.youtube.com/'
     youtube_results_url = youtube_base_url + 'results?'
     youtube_watch_url = youtube_base_url + 'watch?v='
@@ -36,7 +36,7 @@ def run_bot():
             link = queues[ctx.guild.id].pop(0)
             await play(ctx, link=link)
 
-    #defines play command for playing a youtube link
+    # Defines play command for playing a YouTube link
     @client.command(name="play")
     async def play(ctx, *, link):
         try:
@@ -65,8 +65,7 @@ def run_bot():
             song = data['url']
             player = discord.FFmpegOpusAudio(song, **ffmpeg_options)
 
-            voice_clients[ctx.guild.id].play(player, after=lambda e: asyncio.run_coroutine_threadsafe(play_next(ctx),
-                                                                                                      client.loop))
+            voice_clients[ctx.guild.id].play(player, after=lambda e: asyncio.run_coroutine_threadsafe(play_next(ctx), client.loop))
         except Exception as e:
             print(e)
 
@@ -122,5 +121,11 @@ def run_bot():
 
             await client.process_commands(message)
 
+
+
+    # Load the external command module
+    general_functions.setup(client, voice_clients)
+
     client.run(TOKEN)
+
 
