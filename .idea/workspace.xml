@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a57e10-9769-4a33-bff4-b437fe153d62" name="Changes" comment="Added queue system to bot.">
+    <list default="true" id="36a57e10-9769-4a33-bff4-b437fe153d62" name="Changes" comment="Fixed bug where a random response would generate with music commands.">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/music.py" beforeDir="false" afterPath="$PROJECT_DIR$/music.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/responses.py" beforeDir="false" afterPath="$PROJECT_DIR$/responses.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +117,15 @@
       <option name="project" value="LOCAL" />
       <updated>1718330843418</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed bug where a random response would generate with music commands.">
+      <option name="closed" value="true" />
+      <created>1718334945084</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1718334945084</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -135,6 +143,7 @@
     <MESSAGE value="Added Music playing ability with youtube links." />
     <MESSAGE value="Fixed bug where bot will return a random message when user sends link." />
     <MESSAGE value="Added queue system to bot." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added queue system to bot." />
+    <MESSAGE value="Fixed bug where a random response would generate with music commands." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed bug where a random response would generate with music commands." />
   </component>
 </project>

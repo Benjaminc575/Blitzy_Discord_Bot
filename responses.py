@@ -1,21 +1,10 @@
-from random import choice, randint
+from transformers import pipeline, Conversation
 
+# Initialize the model pipeline for text generation
+generator = pipeline("conversational", model="microsoft/DialoGPT-medium")
 
 def get_response(user_input: str) -> str:
-    lowered: str = user_input.lower()
-
-    if lowered == '':
-        return 'Well, you\'re awfully silent...'
-    elif 'hello' in lowered:
-        return 'Hello there!'
-    elif 'how are you' in lowered:
-        return 'Good, thanks!'
-    elif 'bye' in lowered:
-        return ':deaf_man: :shushing_face:'
-    elif 'roll dice' in lowered:
-        return f'You rolled: {randint(1, 6)}'
-    else:
-        return choice(['I do not understand...',
-                       'What are you talking about?',
-                       'Do you mind rephrasing that?',
-                       'Huh?'])
+    # Use the transformer model to generate a response
+    conversation = Conversation(user_input)
+    response = generator(conversation, max_length=100, num_return_sequences=1)
+    return response.generated_responses[0]
