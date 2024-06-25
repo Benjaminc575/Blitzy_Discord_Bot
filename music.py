@@ -107,6 +107,14 @@ def run_bot():
         queues[ctx.guild.id].append(url)
         await ctx.send("Added to queue!")
 
+
+    # Command to skip a song in a queue
+    @client.command(name="skip")
+    async def skip(ctx):
+        if ctx.guild.id in voice_clients:
+            voice_clients[ctx.guild.id].stop()
+            await play_next(ctx)
+
     @client.event
     async def on_message(message):
         if message.author == client.user:
