@@ -36,7 +36,10 @@ def run_bot():
     async def play_next(ctx):
         if queues[ctx.guild.id] != []:
             link = queues[ctx.guild.id].pop(0)
+            current_song[ctx.guild.id] = link  # Update current song
             await play(ctx, link=link)
+        else:
+            current_song[ctx.guild.id] = None
 
     # Defines play command for playing a YouTube link
     @client.command(name="play")
@@ -100,6 +103,7 @@ def run_bot():
             voice_clients[ctx.guild.id].stop()
             await voice_clients[ctx.guild.id].disconnect()
             del voice_clients[ctx.guild.id]
+            current_song[ctx.guild.id] = None
         except Exception as e:
             print(e)
 
