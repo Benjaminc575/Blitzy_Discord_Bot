@@ -23,6 +23,8 @@ def run_bot():
     yt_dl_options = {"format": "bestaudio/best"}
     ytdl = yt_dlp.YoutubeDL(yt_dl_options)
 
+    current_song = {}
+
     ffmpeg_options = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
                       'options': '-vn -filter:a "volume=0.25"'}
 
@@ -42,6 +44,7 @@ def run_bot():
         try:
             voice_client = await ctx.author.voice.channel.connect()
             voice_clients[voice_client.guild.id] = voice_client
+            current_song[ctx.guild.id] = link
         except Exception as e:
             print(e)
 
@@ -114,6 +117,14 @@ def run_bot():
         if ctx.guild.id in voice_clients:
             voice_clients[ctx.guild.id].stop()
             await play_next(ctx)
+
+    # Command to show current song
+    @client.command(name="current")
+    async def current(ctx):
+        if ctx.guild.id in current_song:
+            await ctx.send(f"Currently playing: {current_song[ctx.guild.id]}")
+        else:
+            await ctx.send("No song is currently playing.")
 
     @client.event
     async def on_message(message):
