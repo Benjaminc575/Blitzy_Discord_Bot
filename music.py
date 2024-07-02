@@ -23,7 +23,12 @@ def run_bot():
     yt_dl_options = {"format": "bestaudio/best"}
     ytdl = yt_dlp.YoutubeDL(yt_dl_options)
 
+    # Dictionary for current songs
     current_song = {}
+
+    # Dictionary for volumes
+    volumes = {}
+
 
     ffmpeg_options = {'before_options': '-reconnect 1 -reconnect_streamed 1 -reconnect_delay_max 5',
                       'options': '-vn -filter:a "volume=0.25"'}
@@ -132,6 +137,16 @@ def run_bot():
 
 
     #TODO: Create Command that allows for volume control
+    @client.command(name="volume")
+    async def volume(ctx, vol: int):
+        if ctx.guild.id in voice_clients:
+            if 0 <= vol <= 100:
+                volumes[ctx.guild.id] = vol / 100
+                voice_clients[ctx.guild.id].source.volume = volumes[ctx.guild.id]
+                await ctx.send(f"Volume set to {vol}%")
+            else:
+                await ctx.send("Please Enter a value betweeen 0 and 100.")
+
 
     @client.event
     async def on_message(message):

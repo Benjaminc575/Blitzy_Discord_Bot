@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a57e10-9769-4a33-bff4-b437fe153d62" name="Changes" comment="Modified play_next and stop.">
+    <list default="true" id="36a57e10-9769-4a33-bff4-b437fe153d62" name="Changes" comment="Added to do comment">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/music.py" beforeDir="false" afterPath="$PROJECT_DIR$/music.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -164,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719443628568</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added to do comment">
+      <option name="closed" value="true" />
+      <created>1719963878278</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719963878278</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -188,6 +197,7 @@
     <MESSAGE value="Added Skip command to skip a song in a queue." />
     <MESSAGE value="Added a command to show current song playing." />
     <MESSAGE value="Modified play_next and stop." />
-    <option name="LAST_COMMIT_MESSAGE" value="Modified play_next and stop." />
+    <MESSAGE value="Added to do comment" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added to do comment" />
   </component>
 </project>
