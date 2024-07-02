@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a57e10-9769-4a33-bff4-b437fe153d62" name="Changes" comment="Added a command to show current song playing.">
+    <list default="true" id="36a57e10-9769-4a33-bff4-b437fe153d62" name="Changes" comment="Modified play_next and stop.">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
@@ -156,7 +156,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719442891231</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Modified play_next and stop.">
+      <option name="closed" value="true" />
+      <created>1719443628568</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719443628568</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -179,6 +187,7 @@
     <MESSAGE value="Added new file with a leave command. Updated other files." />
     <MESSAGE value="Added Skip command to skip a song in a queue." />
     <MESSAGE value="Added a command to show current song playing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added a command to show current song playing." />
+    <MESSAGE value="Modified play_next and stop." />
+    <option name="LAST_COMMIT_MESSAGE" value="Modified play_next and stop." />
   </component>
 </project>

@@ -130,6 +130,9 @@ def run_bot():
         else:
             await ctx.send("No song is currently playing.")
 
+
+    #TODO: Create Command that allows for volume control
+
     @client.event
     async def on_message(message):
         if message.author == client.user:
