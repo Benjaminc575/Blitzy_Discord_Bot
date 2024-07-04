@@ -136,7 +136,7 @@ def run_bot():
             await ctx.send("No song is currently playing.")
 
 
-    #TODO: Create Command that allows for volume control
+    # Fix volume command
     @client.command(name="volume")
     async def volume(ctx, vol: int):
         if ctx.guild.id in voice_clients:
@@ -146,6 +146,8 @@ def run_bot():
                 await ctx.send(f"Volume set to {vol}%")
             else:
                 await ctx.send("Please Enter a value betweeen 0 and 100.")
+
+
 
 
     @client.event

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="36a57e10-9769-4a33-bff4-b437fe153d62" name="Changes" comment="Added to do comment">
+    <list default="true" id="36a57e10-9769-4a33-bff4-b437fe153d62" name="Changes" comment="Added volume command">
       <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/music.py" beforeDir="false" afterPath="$PROJECT_DIR$/music.py" afterDir="false" />
@@ -173,7 +173,15 @@
       <option name="project" value="LOCAL" />
       <updated>1719963878278</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Added volume command">
+      <option name="closed" value="true" />
+      <created>1719964452866</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1719964452866</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -198,6 +206,7 @@
     <MESSAGE value="Added a command to show current song playing." />
     <MESSAGE value="Modified play_next and stop." />
     <MESSAGE value="Added to do comment" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added to do comment" />
+    <MESSAGE value="Added volume command" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added volume command" />
   </component>
 </project>
