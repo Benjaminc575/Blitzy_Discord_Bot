@@ -130,6 +130,7 @@ def run_bot():
 
 
     # Command to skip a song in a queue
+    #fix issue where queue will only play up to the second song.
     @client.command(name="skip")
     async def skip(ctx):
         if ctx.guild.id in voice_clients:
