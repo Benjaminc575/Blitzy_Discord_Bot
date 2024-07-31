@@ -120,6 +120,15 @@ def run_bot():
         await ctx.send("Added to queue!")
 
 
+    @client.command(name="list_queue")
+    async def list_queue(ctx):
+        if ctx.guild.id in queues and queues[ctx.guild.id]:
+            queue_list = "\n".join(queues[ctx.guild.id])
+            await ctx.send(f"current Queue:\n{queue_list}")
+        else:
+            await ctx.send("The queue is empty.")
+
+
     # Command to skip a song in a queue
     @client.command(name="skip")
     async def skip(ctx):
